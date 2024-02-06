@@ -14,6 +14,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navDeepLink
+import com.lunardev.kotlinallfeature.feature.camera.ui.CameraScreen
 import com.lunardev.kotlinallfeature.feature.image_picker.ui.ImagePickerScreen
 import com.lunardev.kotlinallfeature.feature.menu.ui.MenuDestinations
 import com.lunardev.kotlinallfeature.feature.menu.ui.MenuRoute
@@ -63,7 +64,6 @@ fun AppNavBuilder(
             )
         }
 
-
 //        Menu Navigation
         composable(
             route = MenuDestinations.ImagePicker.route
@@ -78,11 +78,7 @@ fun AppNavBuilder(
         composable(
             route = MenuDestinations.Camera.route
         ) {
-            Box(modifier = Modifier.fillMaxSize()) {
-                Row(modifier = Modifier.align(Alignment.Center)) {
-                    Text(text = "Camera")
-                }
-            }
+            CameraScreen(navigateBack = { navController.navigateUp() }, isExpandedScreen = isExpandedScreen)
         }
     }
 }

@@ -13,24 +13,6 @@ class ImagePickerViewModel : ViewModel() {
     // Add maxSelectionCount variable with its getter and setter
     var maxSelectionCount: Int = 5
 
-    val buttonText: String
-        get() = if (maxSelectionCount > 1) {
-            "Select up to $maxSelectionCount photos"
-        } else {
-            "Select a photo"
-        }
-
-//    fun launchPhotoPicker() {
-//        if (maxSelectionCount > 1) {
-//            multiplePhotoPickerLauncher.launch(
-//                PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
-//            )
-//        } else {
-//            singlePhotoPickerLauncher.launch(
-//                PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
-//            )
-//        }
-//    }
 
     companion object {
         fun provideFactory(
