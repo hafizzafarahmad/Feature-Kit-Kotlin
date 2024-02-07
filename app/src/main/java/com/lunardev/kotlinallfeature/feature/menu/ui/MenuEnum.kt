@@ -25,6 +25,6 @@ enum class Menus(val title: Int, val icon: ImageVector, val section: Sections) {
 sealed class MenuDestinations(val route: String) {
 
     data object Camera : MenuDestinations(route = "menu/camera")
-
     data object ImagePicker : MenuDestinations(route = "menu/image-picker")
+    data object GPS : MenuDestinations(route = "menu/gps")
 }

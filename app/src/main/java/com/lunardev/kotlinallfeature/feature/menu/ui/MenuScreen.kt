@@ -77,7 +77,6 @@ fun MenuScreen(
         MenuScreenContent(
             currentSection, isExpandedScreen,
             onTabChange, tabContent, screenModifier,
-
         )
     }
 }
@@ -208,6 +207,7 @@ fun rememberTabContent(
                             when (menu.title) {
                                 Menus.ImagePicker.title -> navController.navigate(MenuDestinations.ImagePicker.route)
                                 Menus.Camera.title -> navController.navigate(MenuDestinations.Camera.route)
+                                Menus.GPS.title -> navController.navigate(MenuDestinations.GPS.route)
                             }
                         }
                     )
