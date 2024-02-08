@@ -3,7 +3,6 @@ package com.lunardev.kotlinallfeature.feature.gps.ui
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
-import android.os.Looper
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -28,7 +27,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.android.gms.location.LocationCallback
-import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.lunardev.kotlinallfeature.R
 import com.lunardev.kotlinallfeature.core.component.appBar
@@ -129,26 +127,6 @@ fun GPSScreen(
             }
 
         })
-}
-
-@SuppressLint("MissingPermission")
-fun startLocationUpdates(
-        gpsViewModel: GPSViewModel
-    ) {
-    gpsViewModel.locationCallback.let {
-        val locationRequest = LocationRequest.create().apply {
-            interval = 10000
-            fastestInterval = 5000
-            priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        }
-        if (it != null) {
-            gpsViewModel.fusedLocationClient.requestLocationUpdates(
-                locationRequest,
-                it,
-                Looper.getMainLooper()
-            )
-        }
-    }
 }
 
 @Preview

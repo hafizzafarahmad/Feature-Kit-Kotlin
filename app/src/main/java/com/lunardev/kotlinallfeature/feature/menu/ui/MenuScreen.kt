@@ -208,6 +208,7 @@ fun rememberTabContent(
                                 Menus.ImagePicker.title -> navController.navigate(MenuDestinations.ImagePicker.route)
                                 Menus.Camera.title -> navController.navigate(MenuDestinations.Camera.route)
                                 Menus.GPS.title -> navController.navigate(MenuDestinations.GPS.route)
+                                Menus.Fingerprint.title -> navController.navigate(MenuDestinations.Fingerprint.route)
                             }
                         }
                     )

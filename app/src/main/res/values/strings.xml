@@ -8,6 +8,7 @@
     <string name="permission_granted">Permission Granted</string>
     <string name="permission_denied">Permission Denied</string>
     <string name="refresh">Refresh</string>
+    <string name="scan_biometric">Scan Biometric</string>
 
     <!--  Home Screen  -->
     <string name="home_title">Home</string>cd_search

@@ -15,6 +15,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navDeepLink
 import com.lunardev.kotlinallfeature.feature.camera.ui.CameraScreen
+import com.lunardev.kotlinallfeature.feature.fingerprint.ui.FingerPrintScreen
 import com.lunardev.kotlinallfeature.feature.gps.ui.GPSScreen
 import com.lunardev.kotlinallfeature.feature.image_picker.ui.ImagePickerScreen
 import com.lunardev.kotlinallfeature.feature.menu.ui.MenuDestinations
@@ -85,6 +86,11 @@ fun AppNavBuilder(
             route = MenuDestinations.GPS.route
         ) {
             GPSScreen(navigateBack = { navController.navigateUp() }, isExpandedScreen = isExpandedScreen)
+        }
+        composable(
+            route = MenuDestinations.Fingerprint.route
+        ) {
+            FingerPrintScreen(navigateBack = { navController.navigateUp() }, isExpandedScreen = isExpandedScreen)
         }
     }
 }

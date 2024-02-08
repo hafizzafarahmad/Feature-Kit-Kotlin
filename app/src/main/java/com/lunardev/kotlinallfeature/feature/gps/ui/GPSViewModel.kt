@@ -1,14 +1,17 @@
 package com.lunardev.kotlinallfeature.feature.gps.ui
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.location.Geocoder
+import android.os.Looper
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.location.LocationCallback
+import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
 import com.lunardev.kotlinallfeature.core.model.LocationDetails
 import java.util.Locale
@@ -52,6 +55,26 @@ class GPSViewModel(
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 return GPSViewModel(context = context) as T
             }
+        }
+    }
+}
+
+@SuppressLint("MissingPermission")
+fun startLocationUpdates(
+    gpsViewModel: GPSViewModel
+) {
+    gpsViewModel.locationCallback.let {
+        val locationRequest = LocationRequest.create().apply {
+            interval = 10000
+            fastestInterval = 5000
+            priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+        }
+        if (it != null) {
+            gpsViewModel.fusedLocationClient.requestLocationUpdates(
+                locationRequest,
+                it,
+                Looper.getMainLooper()
+            )
         }
     }
 }

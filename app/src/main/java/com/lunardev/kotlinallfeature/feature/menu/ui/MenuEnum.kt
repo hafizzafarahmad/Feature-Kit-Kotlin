@@ -27,4 +27,5 @@ sealed class MenuDestinations(val route: String) {
     data object Camera : MenuDestinations(route = "menu/camera")
     data object ImagePicker : MenuDestinations(route = "menu/image-picker")
     data object GPS : MenuDestinations(route = "menu/gps")
+    data object Fingerprint : MenuDestinations(route = "menu/fingerprint")
 }

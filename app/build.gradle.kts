@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.lunardev.kotlinallfeature"
-        minSdk = 24
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -137,6 +137,7 @@ dependencies {
     implementation(libs.androidx.window)
 
     implementation(libs.google.android.material)
+    implementation(libs.androidx.biometric)
 }
 
 tasks.withType<Test>().configureEach {
