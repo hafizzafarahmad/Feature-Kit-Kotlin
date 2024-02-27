@@ -21,6 +21,7 @@ import com.lunardev.kotlinallfeature.feature.image_picker.ui.ImagePickerScreen
 import com.lunardev.kotlinallfeature.feature.menu.ui.MenuDestinations
 import com.lunardev.kotlinallfeature.feature.menu.ui.MenuRoute
 import com.lunardev.kotlinallfeature.feature.menu.ui.MenuViewModel
+import com.lunardev.kotlinallfeature.feature.notification_fcm.ui.NotificationFCMScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -91,6 +92,11 @@ fun AppNavBuilder(
             route = MenuDestinations.Fingerprint.route
         ) {
             FingerPrintScreen(navigateBack = { navController.navigateUp() }, isExpandedScreen = isExpandedScreen)
+        }
+        composable(
+            route = MenuDestinations.FirebaseNotification.route
+        ) {
+            NotificationFCMScreen(navigateBack = { navController.navigateUp() }, isExpandedScreen = isExpandedScreen)
         }
     }
 }

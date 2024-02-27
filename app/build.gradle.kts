@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.googleServices)
 }
 
 android {
@@ -96,7 +97,9 @@ dependencies {
     testImplementation(libs.robolectric)
 
     val composeBom = platform(libs.androidx.compose.bom)
+    val firebaseBom = platform(libs.androidx.firebase.bom)
     implementation(composeBom)
+    implementation(firebaseBom)
     androidTestImplementation(composeBom)
 
     implementation(libs.kotlin.stdlib)
@@ -138,6 +141,7 @@ dependencies {
 
     implementation(libs.google.android.material)
     implementation(libs.androidx.biometric)
+    implementation(libs.firebase.messaging)
 }
 
 tasks.withType<Test>().configureEach {

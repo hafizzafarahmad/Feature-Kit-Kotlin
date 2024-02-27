@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "601508531845",
+    "project_id": "featurekitkotlin",
+    "storage_bucket": "featurekitkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601508531845:android:13cac714e040cb2f9ee3ec",
+        "android_client_info": {
+          "package_name": "com.lunardev.kotlinallfeature"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvwTgZMHVo9rLsiV-YHviz0NQtItmo7vU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

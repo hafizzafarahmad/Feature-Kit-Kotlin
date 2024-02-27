@@ -5,9 +5,8 @@
     <string name="no_image">No Image</string>
     <string name="select_image">Select Image</string>
     <string name="open_camera">Open Camera</string>
-    <string name="permission_granted">Permission Granted</string>
-    <string name="permission_denied">Permission Denied</string>
     <string name="refresh">Refresh</string>
+    <string name="show_notification">Show Notification</string>
     <string name="scan_biometric">Scan Biometric</string>
 
     <!--  Home Screen  -->
@@ -22,6 +21,12 @@
     <string name="menu_content_camera">Camera</string>
     <string name="menu_content_gps">GPS</string>
     <string name="menu_content_fingerprint">Fingerprint</string>
+    <string name="menu_content_firebase_notification">Firebase Notification</string>
+    <string name="menu_content_google_map">Google Map</string>
 
+    <!--  Message  -->
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="fetching_fcm_registration_token_filed">Fetching FCM registration token failed</string>
 
 </resources>

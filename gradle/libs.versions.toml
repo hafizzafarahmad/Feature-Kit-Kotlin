@@ -34,7 +34,9 @@ coil = "2.5.0"
 compileSdk = "34"
 compose-compiler = "1.5.4"
 coroutines = "1.7.3"
+firebase-bom = "32.7.2"
 google-maps = "18.2.0"
+google-services = "4.4.1"
 gradle-versions = "0.51.0"
 hilt = "2.48.1"
 hiltExt = "1.1.0"
@@ -101,6 +103,7 @@ androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util" }
 androidx-compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "androidx-constraintlayout" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-corektx" }
+androidx-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
 androidx-glance = { module = "androidx.glance:glance", version.ref = "androidx-glance" }
 androidx-glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "androidx-glance" }
 androidx-glance-material3 = { module = "androidx.glance:glance-material3", version.ref = "androidx-glance" }
@@ -127,7 +130,9 @@ androidx-test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", 
 androidx-window = { module = "androidx.window:window", version.ref = "androidx-window" }
 coil-kt-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 core-jdk-desugaring = { module = "com.android.tools:desugar_jdk_libs", version.ref = "jdkDesugar" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging-ktx"}
 google-android-material = { module = "com.google.android.material:material", version.ref = "material" }
+google-firebase-messaging = { module = "com.google.firebase:firebase-messaging-ktx" }
 googlemaps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "maps-compose" }
 googlemaps-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "google-maps" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -149,6 +154,7 @@ play-services-location = { group = "com.google.android.gms", name = "play-servic
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
+googleServices = { id = "com.google.gms.google-services", version.ref = "google-services" }
 gradle-versions = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }

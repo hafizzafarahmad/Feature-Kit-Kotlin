@@ -227,8 +227,26 @@ fun rememberTabContent(
 
     val externalSection = TabContent(Sections.External) {
         Box(modifier = Modifier.fillMaxSize()) {
-            Row(modifier = Modifier.align(Alignment.Center)) {
-                Text(text = "External")
+            val cells = if (isExpandedScreen) 6 else 3
+
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(cells),
+                modifier = Modifier
+                    .padding(horizontal = 8.dp, vertical = 8.dp)
+            ) {
+                items(Menus.entries.filter { it.section == Sections.External }) { menu ->
+                    ItemMenuContent(
+                        menu = menu,
+                        onClick = {
+                            when (menu.title) {
+                                Menus.FirebaseNotification.title -> navController.navigate(MenuDestinations.FirebaseNotification.route)
+//                                Menus.Camera.title -> navController.navigate(MenuDestinations.Camera.route)
+//                                Menus.GPS.title -> navController.navigate(MenuDestinations.GPS.route)
+//                                Menus.Fingerprint.title -> navController.navigate(MenuDestinations.Fingerprint.route)
+                            }
+                        }
+                    )
+                }
             }
         }
     }
